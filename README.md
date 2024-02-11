@@ -28,13 +28,29 @@ The parameters `--fullscreen` or `--maximized--maximized` can be used to control
 
 To send the window to a specific monitor screen use the `--monitor` paramter.
 
-
 ![](res/publicviewing-running.gif)
 
 Use command line argument `--help` for description of all parameters.
 
-![](res/command-line-example.png)
+```
+Usage: publicviewing-cli.exe [OPTIONS] [URLS]...
 
+Arguments:
+  [URLS]...  Optional url(s) to open, space separated [default: https://google.com]
+
+Options:
+  -a, --above                  window will always be above other windows
+  -c, --cycle-sec <CYCLE_SEC>  cycle time between site reloads
+                                   if more then one URL was given
+                                   these URL's are cycled after that time [default: 10]
+  -f, --fullscreen             open window in fullscreen
+  -m, --maximized              open window maximized
+      --monitor <MONITOR>      monitor number on which the window should open
+                                   This has no effect if you have only one monitor!
+                                   Android / Linux(Wayland): Unsupported
+  -h, --help                   Print help
+  -V, --version                Print version
+  ```
 
 ## Installation
 
